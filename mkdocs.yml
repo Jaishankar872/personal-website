@@ -1,0 +1,62 @@
+site_name: Jaishankar's Site
+site_url: https://jaidb.in
+theme:
+  name: material
+  font:
+    # text: 
+    code: Red Hat Mono
+  logo: jai_logo.png  # Create at https://www.flamingtext.com/logo/Design-Fluffy-Name/Jai
+  features:
+    - navigation.footer
+    - header.autohide
+    - navigation.tabs
+    - navigation.tabs.sticky 
+    - navigation.expand
+    - navigation.indexes
+    - navigation.instant
+    # # - navigation.sections
+    - navigation.tracking
+    - navigation.top
+    # - toc.follow
+    # - toc.integrate
+    # - content.code.copy
+    - search.highlight
+    # 
+  palette: 
+    # Palette toggle for light mode
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny 
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+
+markdown_extensions:
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - md_in_html
+  - pymdownx.blocks.caption
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_javascript:
+  - javascripts/katex.js
+  - https://unpkg.com/katex@0/dist/katex.min.js
+  - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
+
+extra_css:
+  - https://unpkg.com/katex@0/dist/katex.min.css
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/Jaishankar872
+      name: Github
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/jaishankar-mu
+      name: LinkedIn
