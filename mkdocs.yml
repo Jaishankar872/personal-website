@@ -1,27 +1,30 @@
-site_name: Jaishankar's Site
+site_name: Jaishankar's Website
 site_url: https://docs.jaidb.in
 
+# Repository
+repo_name: Jaishankar Website
+repo_url: https://github.com/Jaishankar872/personal-website
+
 # Copyright
-copyright: Copyright &copy; 2025 Jaishankar
+copyright: Copyright &copy; 2025 Jaishankar M
 
 theme:
   name: material
-  # custom_dir: overrides
+  custom_dir: overrides
   font:
     # text: 
     code: Red Hat Mono
   logo: jai_logo.png  # Create at https://www.flamingtext.com/logo/Design-Fluffy-Name/Jai
   features:
-    - navigation.footer
-    - header.autohide
-    - navigation.tabs
-    - navigation.tabs.sticky 
+    - navigation.indexes          # Implied section 'index.md' files
+    - navigation.tabs             # Static upper section tabs (exist)
+    - navigation.tabs.sticky      # Static upper section tabs (stay)
+    - navigation.footer           # Add 'previous' and 'next' buttons in the footer
+    - navigation.instant          # Keep navigation from reloading
+    - navigation.instant.progress # Display page loading progress-bar ( > 400ms)
+    - header.autohide 
     - navigation.expand
-    - navigation.indexes
-    - navigation.instant
-    # # - navigation.sections
     - navigation.tracking
-    - navigation.top
     # - toc.follow
     # - toc.integrate
     # - content.code.copy
@@ -86,3 +89,5 @@ extra:
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/jaishankar-mu
       name: LinkedIn
+
+# Reference: https://github.com/squidfunk/mkdocs-material/blob/master/mkdocs.yml

@@ -1,9 +1,5 @@
 ---
-# template: home.html
-title: Material for MkDocs
-social:
-  cards_layout_options:
-    title: Documentation that simply works
+template: home.html
 ---
 
 Welcome to Jaishankar's website.

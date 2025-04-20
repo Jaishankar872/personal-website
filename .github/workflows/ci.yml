@@ -26,4 +26,6 @@ jobs:
           restore-keys: |
             mkdocs-material-
       - run: pip install mkdocs-material 
+      - name: Add CNAME File
+        run: echo "docs.jaidb.in" > ./site/CNAME
       - run: mkdocs gh-deploy --force
