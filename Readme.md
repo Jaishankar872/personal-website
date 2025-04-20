@@ -14,9 +14,11 @@ Ensure the following tools and packages are installed:
 
 > **Note:** The following commands are tailored for Windows systems.
 
-1. Clone this GitHub repository to your local machine:  
+1. Clone this GitHub repository to your local machine and Navigate to the project directory:  
     ```bash
     git clone https://github.com/Jaishankar872/personal-website.git
+    cd personal-website
+    code .
     ```
 2. Set up a Python virtual environment and activate it:  
     ```bash
@@ -28,9 +30,7 @@ Ensure the following tools and packages are installed:
     pip --version
     pip install mkdocs-material
     ```
-4. Navigate to the project directory, open it in VSCode, and start the MkDocs server:  
+4. In VSCode, and start the MkDocs server:  
     ```bash
-    cd personal-website
-    code .
     mkdocs serve
     ```
