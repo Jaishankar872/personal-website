@@ -3,11 +3,15 @@ title: Signal Processing
 ---
 ## Base Concept
  Calculation done below order
- 1. Remove the DC offset in all signal.
- 2. RMS Amplitude of voltage, current signal.
- 3. Calculate RMS Voltage, Current
- 4. With modulation method, calculate the phase
- 5. Now derive the complex impedance value
+  1. Remove the DC offset in all signal.
+
+  2. RMS Amplitude of voltage, current signal.
+
+  3. Calculate RMS Voltage, Current
+
+  4. With modulation method, calculate the phase
+  
+  5. Now derive the complex impedance value
 
 <figure markdown="span">
   ![Image title](assets/DSP_concept1.png){ width="700" }
@@ -28,15 +32,15 @@ The voltages are acquired using a two channel differential ADC and processed in 
 
 1. Modulation of the signal by multiplying the signal with a unity magnitude square wave of 0 degree phase and taking the average of the resulting signal ($V_1$).
     <figure markdown="span">
-    ![Image title](assets/DSP_concept2.png){ width="700" }
+      ![Image title](assets/DSP_concept2.png){ width="700" }
     </figure>
 
 2. Modulation of the signal by multiplying the signal with a unity magnitude square wave of 90 degree phase and taking the average of the resulting signal ($V_2$).
     <figure markdown="span">
-    ![Image title](assets/DSP_concept3.png){ width="700" }
+      ![Image title](assets/DSP_concept3.png){ width="700" }
     </figure>
 
 $$
 \alpha = \tan^{-1} (\frac{V_2}{V_1})
 $$ 
-phase ‘$\alpha$’ of any signal V is estimated
+phase ‘$\alpha$’ of any signal is estimated with respect to the reference signal.

@@ -1,31 +1,36 @@
-## Perquisites
-1. Python3 and pip package
-2. mkdocs-material
-```bash
-pip install mkdocs-material
-```
-3. VScode with Extensions (yaml)
-4. Git
+## Prerequisites
 
-## Procedure to setup environment  
-> **Note**: Below command work well with windows 
-1. Clone this github repository
-```bash
-git clone https://github.com/Jaishankar872/personal-website.git
-```
-2. Create & Activate the Virtual Env in python
-```bash
-python -m venv venv
-.\venv\Scripts\activate
-```
-3. Check the Pip & install the mkdocs [**Inside Virtual Env**]
-``` 
-pip --version
-pip install mkdocs-material
-```
-4. Initial setup $\rightarrow$ open VScode & start server
-```
-cd personal-website
-code .
-mkdocs serve
-```
+Ensure the following tools and packages are installed:
+
+1. **Python 3** and **pip** package manager.  
+2. **MkDocs Material**, Install it using:  
+   ```bash
+   pip install mkdocs-material
+   ```
+3. **Visual Studio Code (VSCode)** with the **YAML** extension.  
+4. **Git**.
+
+## Procedure to Set Up the Environment  
+
+> **Note:** The following commands are tailored for Windows systems.
+
+1. Clone this GitHub repository to your local machine:  
+    ```bash
+    git clone https://github.com/Jaishankar872/personal-website.git
+    ```
+2. Set up a Python virtual environment and activate it:  
+    ```bash
+    python -m venv venv
+    .\venv\Scripts\activate
+    ```
+3. Verify `pip` is working and install MkDocs Material **inside the virtual environment**:  
+    ```bash
+    pip --version
+    pip install mkdocs-material
+    ```
+4. Navigate to the project directory, open it in VSCode, and start the MkDocs server:  
+    ```bash
+    cd personal-website
+    code .
+    mkdocs serve
+    ```
