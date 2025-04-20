@@ -1,7 +1,12 @@
 site_name: Jaishankar's Site
-site_url: https://jaidb.in
+site_url: https://docs.jaidb.in
+
+# Copyright
+copyright: Copyright &copy; 2025 Jaishankar
+
 theme:
   name: material
+  # custom_dir: overrides
   font:
     # text: 
     code: Red Hat Mono
@@ -34,6 +39,18 @@ theme:
         icon: material/weather-night
         name: Switch to light mode
 
+
+# Navigation
+nav:
+  - Home:
+    - Home: index.md
+  - M181 LCR FW:
+    - Introduction: m181_lcr/Home.md
+    - Hardware Design: m181_lcr/Hardware-Design.md
+    - Firmware Design: m181_lcr/Firmware-Design.md
+    - Signal Processing: m181_lcr/Signal-Processing.md
+    - Impedance Calculation: m181_lcr/Impedance-Calculation.md
+
 markdown_extensions:
   - attr_list
   - pymdownx.emoji:
@@ -43,6 +60,15 @@ markdown_extensions:
   - pymdownx.blocks.caption
   - pymdownx.arithmatex:
       generic: true
+  - pymdownx.tabbed:
+      alternate_style: true
+      combine_header_slug: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
 
 extra_javascript:
   - javascripts/katex.js
