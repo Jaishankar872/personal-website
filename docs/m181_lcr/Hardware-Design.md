@@ -33,7 +33,7 @@ The manufacturer (JYETech) specifies the following capabilities:
 
 ## Design Files
 
-- [Schematics File](https://jyetech.com/wp-content/uploads/Schematic_M181.pdf)  
+- [Schematics File](https://github.com/Jaishankar872/LCR_Meter_Proto_M181/blob/STM32Cube/docs/Sch_M181_LCR_Meter.pdf)  
 - [Assembly Guide](https://jyetech.com/wp-content/uploads/M181_AssemblyGuide.pdf)
 
 ## Block-wise Explanation
@@ -75,12 +75,30 @@ $$
 
 **Note:** Calibration is required to compensate for probe errors.
 
-### Amplifier Section
+### Amplifier with Gain Controller Section
 
-- Instrument amplifiers (U2A, U2C, U2D) with a fixed gain of 5.25.  
-- A non-inverting amplifier with a gain of 100 adds an offset voltage (-1.77V) and connects to the MCU's ADC.  
-- Amplitude adjustment is achieved via gain selection (voltage divider) and a high-pass filter (DC block).  
+<figure markdown="span">
+  ![Image title](assets/HW_concept5.png){ width="700" }
+</figure>
+
+- Instrument amplifiers (U2A, U2C, U2D) with a fixed gain of 5.25. 
 - The gain is selectable via the GS pin, allowing unity gain or attenuation by a factor of $\frac{1}{101}$.
+- Next it is connected to high-pass filter which DC block signal.  
+- A non-inverting amplifier with a gain of 100 adds an offset voltage (-1.77V) and connects to the MCU's ADC.  
+
+<figure markdown="span">
+  ![Image title](assets/HW_concept6.png){ width="300" }
+</figure>
+
+$$
+V_{out}=V_{in}.(1+\frac{R_1}{R_2}+\frac{R_1}{R_3}) - V_{offset} .(\frac{R_1}{R_3}) 
+$$
+
+Here $R_1 = R_3 = 5.1$kohm, $R_2 = 51$ohm, $V_{offset}=-1.77$V
+
+$$
+V_{out}=102\times V_{in} + 1.77 V 
+$$
 
 ### Miscellaneous Section
 
