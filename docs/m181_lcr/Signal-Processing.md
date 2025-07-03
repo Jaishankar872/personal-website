@@ -2,7 +2,9 @@
 title: Signal Processing
 ---
 ## Base Concept
- Calculation done below order
+ Calculation & data processing done below order,
+
+
   1. Remove the DC offset in all signal.
 
   2. RMS Amplitude of voltage, current signal.
